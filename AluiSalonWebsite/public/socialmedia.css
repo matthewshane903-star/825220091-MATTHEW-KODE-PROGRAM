@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding: 15px 0;
+  color: white;
+  background: #222;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* SLIDER */
+.slider-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* BACKGROUND */
+.background-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.8s ease-in-out, background-image 0.8s ease-in-out;
+  z-index: 0;
+  opacity: 1;
+}
+
+/* SLIDER */
+.slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 130px);
+  z-index: 2;
+  overflow: hidden;
+  bottom: 5%;
+}
+
+/* SLIDE */
+.slide {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.8s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide.prev {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* CARD */
+.card {
+  width: 270px;
+  height: 320px;
+  border-radius: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  text-align: center;
+  transition: transform 0.3s;
+  backdrop-filter: blur(3px);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card i {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.card.instagram {
+  background: linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7);
+}
+
+.card.tiktok {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+}
+
+.search-btn {
+  margin-top: 50px;
+  background: #000;
+  color: white;
+  border: 2px solid white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  transition: transform 0.2s ease;
+}
+
+.search-btn:hover {
+  transform: scale(1.1);
+}
+
+.slide-btn {
+  position: absolute;
+  top: 37%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-btn.prev { left: 15px; }
+.slide-btn.next { right: 15px; }
+
+.slide-btn i { font-size: 1.2rem; }
+
+.slide-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
+.navbar i {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 200px;
+    height: 230px;
+  }
+  .card i {
+    font-size: 3rem;
+  }
+  .slide-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .slide-btn i {
+    font-size: 1rem;
+  }
+}

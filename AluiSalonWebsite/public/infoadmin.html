@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alui Salon - Information</title>
+    <link rel="stylesheet" href="infoadmin.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <h2>Information</h2>
+        <button id="openModalBtn" class="add-btn">+</button>
+    </header>
+
+    <div class="tabs">
+        <button class="tab active" id="tabNews">News</button>
+        <button class="tab" id="tabPicture">Picture</button>
+    </div>
+
+    <div id="infoList" class="info-list">
+        <!-- Card otomatis -->
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <h3>Tambah Informasi</h3>
+        <label>Judul</label>
+        <input type="text" id="titleInput" placeholder="Masukkan judul">
+
+        <label>Deskripsi</label>
+        <textarea id="descInput" placeholder="Masukkan deskripsi"></textarea>
+
+        <div class="modal-actions">
+            <button class="cancel-btn" id="closeModalBtn">Batal</button>
+            <button class="save-btn" id="saveInfoBtn">Simpan</button>
+        </div>
+    </div>
+</div>
+
+<!-- Navbar -->
+  <nav class="navbar">
+    <a href="mainsalonadmin.html"><i class="fa-solid fa-house"></i><br>Home</a>
+    <a href="calender.html"><i class="fa-solid fa-calendar-check"></i><br>Calender</a>
+    <a href="cekpembayaran.html"><i class="fa-solid fa-file-lines"></i><br>Cek Status</a>
+    <a href="chatadmin.html"><i class="fa-solid fa-comments"></i><br>Chat</a>
+    <a href="profileadmin.html"><i class="fa-solid fa-user"></i><br>Account</a>
+  </nav>
+
+<script type="module" src="infoadmin.js"></script>
+
+</body>
+</html>

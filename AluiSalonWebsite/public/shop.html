@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alui Salon - Shop</title>
+  <link rel="stylesheet" href="shop.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <div class="card shop-card">
+    <div class="header-top">
+      <a href="mainsalon.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+      <h2>Shop</h2>
+    </div>
+
+    <br>
+
+    <!-- KATEGORI PRODUK -->
+    <div class="category-scroll">
+      <button class="category active" data-category="pewarna">Pewarna Rambut</button>
+      <button class="category" data-category="shampoo">Shampoo</button>
+      <button class="category" data-category="sisir">Sisir</button>
+      <button class="category" data-category="treatment">Treatment Rambut</button>
+      <button class="category" data-category="kondisioner">Kondisioner Rambut & Kulit Kepala</button>
+    </div>
+
+    <br><br>
+
+    <!-- JUDUL PRODUK -->
+    <h3 class="product-title">Produk Alui Salon</h3>
+
+    <br>
+
+    <div class="product-grid" id="productGrid">
+      
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="mainsalon.html"><i class="fa-solid fa-house"></i><br>Home</a>
+    <a href="booking.html"><i class="fa-solid fa-calendar-check"></i><br>Booking</a>
+    <a href="shop.html" class="active-nav"><i class="fa-solid fa-store"></i><br>Shop</a>
+    <a href="chat.html"><i class="fa-solid fa-comments"></i><br>Chat</a>
+    <a href="profile.html"><i class="fa-solid fa-user"></i><br>Account</a>
+  </nav>
+
+  <script src="shop.js"></script>
+</body>
+</html>

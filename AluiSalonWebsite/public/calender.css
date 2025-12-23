@@ -1,0 +1,349 @@
+:root {
+  --card: #ffffff;
+  --accent: #333;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: url("Picture/backgroundaluisalon.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: var(--accent);
+}
+
+.header {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 6px 0;
+  font-size: 22px;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.container {
+  padding: 20px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Bulan */
+.month-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+
+.month-nav h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.month-nav button {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Kalender */
+.calendar {
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  padding: 15px;
+  max-width: 380px;
+  width: 100%;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.day {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+  border-radius: 50%;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border: 1.5px solid #ccc;
+}
+
+.day:hover {
+  background: #444;
+  color: #fff;
+}
+
+.day.active {
+  background: #333;
+  color: #fff;
+  border-color: #000;
+  transform: scale(1.1);
+}
+
+/* Waktu Appointment */
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.time-slots button {
+  background: #eee;
+  border: 2px solid #000;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.time-slots button:hover {
+  background: #444;
+  color: #fff;
+}
+
+.time-slots button.active {
+  background: #333;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
+.navbar i {
+  font-size: 20px;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .calendar {
+    width: 90%;
+  }
+
+  .day {
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .time-slots button {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+
+/* Card Client */
+.client-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #404040; 
+  color: #fff;
+  border-radius: 16px;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow-x: auto; 
+  position: relative;
+}
+
+.reschedule-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+}
+
+.reschedule-icon:hover {
+  color: #ffcc00;
+}
+
+.client-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Date Box */
+.client-date {
+  background: #fff;
+  color: #333;
+  text-align: center;
+  padding: 16px 14px;
+  border-radius: 12px;
+  min-width: 60px;
+  min-height: 80px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.client-date h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.client-date p {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Info Box */
+.client-info {
+  flex: 1;
+  padding-left: 15px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.client-info h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.client-info p {
+  margin: 2px 0;
+  font-size: 0.85rem;
+}
+
+/* Empty Message */
+.client-card.empty {
+  text-align: center;
+  background: #eee;
+  color: #555;
+  padding: 18px;
+  border-radius: 14px;
+  font-size: 0.95rem;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.modal h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.modal label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 600;
+}
+
+.modal select,
+.modal button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.modal button {
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.modal button:hover {
+  background: #555;
+}
+
+/* Tombol close modal */
+.modal .close-btn {
+  background: #eee;
+  color: #333;
+  margin-top: 0;
+}
+
+.modal .close-btn:hover {
+  background: #ccc;
+}

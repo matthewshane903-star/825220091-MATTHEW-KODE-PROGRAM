@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alui Salon - Kelola Admin</title>
+
+  <link rel="stylesheet" href="admin.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="app-header">
+  <a href="mainsalonadmin.html" class="back-btn">
+    <span class="material-icons">arrow_back</span>
+  </a>
+  <h2>Kelola Admin</h2>
+</header>
+
+<main class="container">
+
+  <div class="card">
+    <h3>Admin Saat Ini</h3>
+    <p id="currentAdmin">Loading...</p>
+  </div>
+
+  <div class="card">
+    <h3>Pilih User Baru</h3>
+
+    <select id="userSelect">
+      <option value="" disabled selected>-- Pilih User --</option>
+    </select>
+
+    <button id="changeAdminBtn">
+      Jadikan Admin
+    </button>
+
+    <p class="warning">
+      ⚠️ Admin lama akan otomatis menjadi user biasa
+    </p>
+  </div>
+
+</main>
+
+<script type="module" src="admin.js"></script>
+</body>
+</html>

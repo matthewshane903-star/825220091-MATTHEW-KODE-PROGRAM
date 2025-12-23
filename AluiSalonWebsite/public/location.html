@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alui Salon - Location</title>
+  <link rel="stylesheet" href="location.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="card">
+    <div class="header">
+      <a href="mainsalon.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+      <h2>Location</h2>
+    </div>
+    <!-- Form Input Lokasi Pengguna -->
+    <div class="route-form">
+      <h3>Rute Jalan:</h3>
+      <p>Masukkan lokasi anda terkini. </p>
+      <form id="directionForm">
+        <input type="text" id="userLocation" placeholder="masukan lokasi anda..." required>
+        <button type="submit">
+          <i class="fa-solid fa-location-arrow"></i> Tampilkan Rute
+         </button>
+         <button type="button" id="useMyLocation">
+          <i class="fa-solid fa-location-crosshairs"></i>
+        </button>
+      </form>
+    </div>
+
+    <!-- Peta -->
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps?q=Jalan%20Taman%20Pluit%20Kencana%20No.28%2C%20Pluit%2C%20Jakarta%20Utara&output=embed"
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <div class="address">
+      <h3>Alui Salon</h3>
+      <p>Jalan Taman Pluit Kencana No.28, Pluit, Kecamatan Penjaringan,<br>Jakarta Utara, DKI Jakarta</p>
+    </div>
+  </div>
+
+  <div class="card gallery">
+    <h2>Lokasi Alui Salon</h2>
+    <div class="gallery-grid">
+      <img src="Picture/fototempataluisalon1.jpg" alt="Alui Salon 1">
+      <img src="Picture/fototempataluisalon2.jpg" alt="Alui Salon 2">
+      <img src="Picture/fototempataluisalon3.jpg" alt="Alui Salon 3">
+      <img src="Picture/fototempataluisalon4.jpg" alt="Alui Salon 4">
+    </div>
+  </div>
+
+  <!-- Modal Zoom -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="mainsalon.html"><i class="fa-solid fa-house"></i><br>Home</a>
+    <a href="#"><i class="fa-solid fa-calendar-check"></i><br>Booking</a>
+    <a href="#"><i class="fa-solid fa-store"></i><br>Shop</a>
+    <a href="#"><i class="fa-solid fa-comments"></i><br>Chat</a>
+    <a href="profile.html"><i class="fa-solid fa-user"></i><br>Account</a>
+  </nav>
+
+  <script src="location.js"></script>
+</body>
+</html>

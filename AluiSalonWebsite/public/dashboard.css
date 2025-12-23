@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url("Picture/backgroundaluisalon.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 80px;
+}
+
+.app-header {
+  padding: 18px;
+  text-align: center;
+  background: #333;
+}
+
+.dashboard {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Statistik Card */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: rgba(255,255,255,0.15);
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform .2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card span {
+  font-size: 36px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.card p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 6px 0 0;
+}
+
+/* Info Box */
+.info-box {
+  margin-top: 30px;
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.info-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-box li {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+  text-align: center;
+}
+
+.navbar a.active {
+  color: #000;
+  font-weight: bold;
+}
+
+.navbar i {
+  font-size: 20px;
+}

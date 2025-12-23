@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alui Salon - Appointment</title>
+  <link rel="stylesheet" href="appointment.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="app-header">
+    <h2>Jadwal Appointment</h2>
+    <p id="userNameDisplay"></p>
+  </header>
+
+  <main class="app-container">
+    <!-- Appointment Aktif -->
+    <section class="appointment-section">
+      <h3><u><b>Appointment :</b></u></h3>
+      <div id="currentAppointment" class="appointment-list">
+        <div class="empty">Belum ada appointment aktif.</div>
+      </div>
+    </section>
+
+    <!-- Riwayat Appointment -->
+    <section class="history-section">
+      <h3><u><b>Riwayat Appointment:</b></u></h3>
+      <div id="historyList" class="history-list">
+        <div class="empty">Belum ada riwayat appointment.</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="mainsalon.html"><i class="fa-solid fa-house"></i><br>Home</a>
+    <a href="booking.html"><i class="fa-solid fa-calendar-check"></i><br>Booking</a>
+    <a href="shop.html"><i class="fa-solid fa-store"></i><br>Shop</a>
+    <a href="chat.html"><i class="fa-solid fa-comments"></i><br>Chat</a>
+    <a href="profile.html"><i class="fa-solid fa-user"></i><br>Account</a>
+  </nav>
+
+  <script type="module" src="appointment.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alui Salon - Admin Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="app-header">
+    <h2>Admin Dashboard</h2>
+  </header>
+
+  <!-- Dashboard -->
+  <main class="dashboard">
+
+    <!-- Statistik Card -->
+    <section class="stats">
+      <div class="card">
+        <span class="material-icons">people</span>
+        <h4>Total User</h4>
+        <p id="totalUser">0</p>
+      </div>
+
+      <div class="card">
+        <span class="material-icons">event</span>
+        <h4>Total Booking</h4>
+        <p id="totalBooking">0</p>
+      </div>
+
+      <div class="card">
+        <span class="material-icons">check_circle</span>
+        <h4>Booking Disetujui</h4>
+        <p id="approvedBooking">0</p>
+      </div>
+
+      <div class="card">
+        <span class="material-icons">payments</span>
+        <h4>Total Pendapatan</h4>
+        <p id="totalRevenue">Rp 0</p>
+      </div>
+    </section>
+
+    <!-- Info lain -->
+    <section class="info-box">
+      <h3>📌 Ringkasan Hari Ini</h3>
+      <ul>
+        <li>🔔 Booking besok: <span id="tomorrowBooking">0</span></li>
+        <li>📊 Total Booking Bulan Ini: <span id="monthlyBooking">0</span></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="mainsalonadmin.html"><i class="fa-solid fa-house"></i><br>Home</a>
+    <a href="calender.html"><i class="fa-solid fa-calendar-check"></i><br>Calender</a>
+    <a href="cekpembayaran.html"><i class="fa-solid fa-file-lines"></i><br>Cek Status</a>
+    <a href="chatadmin.html"><i class="fa-solid fa-comments"></i><br>Chat</a>
+    <a href="profileadmin.html"><i class="fa-solid fa-user"></i><br>Account</a>
+  </nav>
+
+  <script type="module" src="dashboard.js"></script>
+
+</body>
+</html>

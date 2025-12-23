@@ -1,0 +1,110 @@
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: url("Picture/backgroundaluisalon.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding-bottom: 80px;
+  color: #333;
+}
+
+.app-header {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+}
+
+.app-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.app-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Notifikasi Card */
+.notif-card {
+  background-color: #444; 
+  color: #fff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  border-left: 5px solid #888; 
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.notif-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+}
+
+.notif-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.notif-card p {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.notif-card small {
+  display: block;
+  text-align: right;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
+.navbar i {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 600px) {
+  .app-header {
+    padding: 16px;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .app-header h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .app-container {
+    padding: 30px;
+  }
+}

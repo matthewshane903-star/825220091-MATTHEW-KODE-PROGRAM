@@ -1,0 +1,222 @@
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: url("Picture/backgroundaluisalon.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding-bottom: 80px;
+  color: #333;
+}
+
+.app-header {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+  border-radius: 0 0 20px 20px;
+}
+
+.app-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.app-header p {
+  font-size: 1rem;
+  color: #ddd;
+  margin-top: 4px;
+}
+
+.app-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* JUDUL SECTION */
+section h3 {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+/* CARD APPOINTMENT */
+.appointment-card,
+.history-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #404040;
+  color: #fff;
+  border-radius: 16px;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow-x: auto; 
+}
+
+.appointment-card:hover,
+.history-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.date-box {
+  background: #fff;
+  color: #333;
+  text-align: center;
+  padding: 16px 14px; 
+  border-radius: 12px;
+  min-width: 60px;
+  min-height: 80px; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.date-box h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.date-box p {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.info-box {
+  flex: 1;
+  padding-left: 15px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  white-space: nowrap; 
+}
+
+.status-icon {
+  font-size: 1.6rem;
+  margin-left: 10px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.empty {
+  text-align: center;
+  background: #eee;
+  color: #555;
+  padding: 18px;
+  border-radius: 14px;
+  font-size: 0.95rem;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
+.navbar i {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+  .app-header {
+    padding: 16px;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .app-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .app-header p {
+    font-size: 0.85rem;
+  }
+
+  .appointment-card,
+  .history-card {
+    padding: 10px 12px;
+    margin-bottom: 10px;
+  }
+
+  .date-box {
+    min-width: 50px;
+    padding: 8px 10px;
+  }
+
+  .date-box h2 {
+    font-size: 1.1rem;
+  }
+
+  .date-box p {
+    font-size: 0.7rem;
+  }
+
+  .info-box {
+    font-size: 0.85rem;
+    padding-left: 10px;
+  }
+
+  .status-icon {
+    font-size: 1.4rem;
+  }
+
+  .app-container {
+    padding: 15px;
+  }
+
+  .appointment-card,
+  .history-card {
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .app-container {
+    padding: 30px;
+  }
+
+  .appointment-card,
+  .history-card {
+    padding: 18px 22px;
+  }
+
+  .info-box {
+    font-size: 1rem;
+  }
+}
+
+#userNameDisplay {
+  font-size: 1.2rem; 
+  font-weight: 600;  
+  color: #ffffff;    
+  margin-top: 8px;
+  letter-spacing: 0.5px; 
+}

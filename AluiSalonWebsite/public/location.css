@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("Picture/backgroundaluisalon.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  margin: 20px 0;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.header h2 {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+}
+
+.back-btn {
+  color: #333;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.back-btn:hover {
+  color: #4CAF50;
+}
+
+/* Map */
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Address */
+.address {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.address h3 {
+  font-size: 18px;
+  color: #333;
+}
+
+.address p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+/* Galeri Foto */
+.gallery {
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Modal Zoom Gambar */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  animation: zoomIn 0.3s ease;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #f44336;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
+.navbar i {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 95%;
+  }
+
+  .map-container iframe {
+    height: 300px;
+  }
+
+  .gallery-grid img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.route-form p {
+  font-size: 14px;
+}
+
+.route-form form {
+  display: flex;
+  justify-content: left;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 20px;
+  margin-left: 0;
+}
+
+.route-form input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 60%;
+  max-width: 280px;
+}
+
+.route-form button {
+  background-color: #d3aa2e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.route-form button:hover {
+  background-color: #2ed38b;
+}
+
+#useMyLocation {
+  background-color: #1665dc;
+}
+
+#useMyLocation:hover {
+  background-color: #1665dc;
+}

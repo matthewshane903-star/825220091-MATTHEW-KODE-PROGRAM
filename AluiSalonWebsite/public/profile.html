@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alui Salon - Profile Account</title>
+  <script type="module" src="profile.js"></script>
+  <link rel="stylesheet" href="profile.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="header">
+        <a href="mainsalon.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+        <h2>Profile Account</h2>
+      </div>
+
+      <div class="profile-info">
+        <i class="fa-solid fa-user-circle profile-icon"></i>
+        <h3 id="username"></h3>
+        <p id="useremail"></p>
+      </div>
+
+      <form id="profileForm">
+        <label>Nama:</label>
+        <input type="text" id="name" placeholder="-" required>
+
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="-" readonly>
+
+        <label>No. WhatsApp:</label>
+        <input type="text" id="phone" placeholder="-" required>
+
+        <label>Jenis Kelamin:</label>
+        <select id="gender" required>
+          <option value="">-</option>
+          <option value="Laki-laki">Laki-laki</option>
+          <option value="Perempuan">Perempuan</option>
+        </select>
+
+        <label>Alamat:</label>
+        <textarea id="address" placeholder="-" required></textarea>
+
+        <button type="submit" class="btn-simpan">
+          <i class="fa-solid fa-floppy-disk"></i> <b>Simpan</b>
+        </button>
+      </form>
+
+      <button class="btn-logout">
+        <i class="fa-solid fa-right-from-bracket"></i> <b>Log Out</b>
+      </button>
+
+      <hr>
+
+      <button class="btn-delete">
+        <i class="fa-solid fa-trash"></i> <b>Hapus Akun</b>
+      </button>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="mainsalon.html"><i class="fa-solid fa-house"></i><br>Home</a>
+    <a href="#"><i class="fa-solid fa-calendar-check"></i><br>Booking</a>
+    <a href="#"><i class="fa-solid fa-store"></i><br>Shop</a>
+    <a href="#"><i class="fa-solid fa-comments"></i><br>Chat</a>
+    <a href="profile.html"><i class="fa-solid fa-user"></i><br>Account</a>
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

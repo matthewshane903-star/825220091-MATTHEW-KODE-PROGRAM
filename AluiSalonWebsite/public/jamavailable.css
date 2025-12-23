@@ -1,0 +1,293 @@
+:root {
+  --card: #ffffff;
+  --accent: #333;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: url("Picture/backgroundaluisalon.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: var(--accent);
+}
+
+.header {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 6px 0;
+  font-size: 22px;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.container {
+  padding: 20px;
+  margin-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.month-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+
+.month-nav h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.month-nav button {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.calendar {
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  padding: 15px;
+  max-width: 380px;
+  width: 100%;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.day {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+  border-radius: 50%;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border: 1.5px solid #ccc;
+}
+
+.day:hover {
+  background: #444;
+  color: #fff;
+}
+
+.day.active {
+  background: #333;
+  color: #fff;
+  border-color: #000;
+  transform: scale(1.1);
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.time-slots span {
+  background: #eee;
+  border: 2px solid #000;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.add-time-btn {
+  margin-top: 10px;
+  background: #333;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(3px);
+  z-index: 2000;
+}
+
+.modal-content {
+  background: #ffffff;
+  width: 90%;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  animation: popUp 0.25s ease;
+}
+
+@keyframes popUp {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.input-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.time-input {
+  width: 130px;
+  padding: 10px 14px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.add-time-btn-modal {
+  background: #333;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  border: none;
+  margin-top: 10px;
+}
+
+.time-choices {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.time-pill {
+  background: #eee;
+  border: 2px solid #333;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.time-pill.selected {
+  background: #333;
+  color: #fff;
+}
+
+.save-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px 18px;
+  background: #313131;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+.close-btn {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 18px;
+  background: #999;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
+.navbar i {
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  .calendar {
+    width: 90%;
+  }
+
+  .day {
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .time-slots span {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}

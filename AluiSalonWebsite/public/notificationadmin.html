@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alui Salon - Notification</title>
+  <link rel="stylesheet" href="notificationadmin.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="app-header">
+    <a href="mainsalonadmin.html" class="back-btn"><span class="material-icons">arrow_back</span></a>
+    <h2>Notification</h2>
+    <button id="openModal" class="add-btn"><span class="material-icons">add</span></button>
+  </header>
+
+  <main class="app-container" id="notifContainer">
+    <!-- Notifikasi muncul disini -->
+  </main>
+
+  <!-- Modal Tambah Notifikasi -->
+  <div id="notifModal" class="modal">
+    <div class="modal-content">
+      <h3>Buat Notifikasi</h3>
+
+      <!-- Dropdown Target -->
+      <select id="notifTarget">
+        <option value="all">Semua User</option>
+      </select>
+
+      <input type="text" id="notifTitle" placeholder="Add a subject..." />
+      <textarea id="notifMessage" placeholder="Type a message..."></textarea>
+      <button id="sendNotif">
+        <span class="material-icons">send</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="mainsalonadmin.html"><i class="fa-solid fa-house"></i><br>Home</a>
+    <a href="calender.html"><i class="fa-solid fa-calendar-check"></i><br>Calender</a>
+    <a href="cekpembayaran.html"><i class="fa-solid fa-file-lines"></i><br>Cek Status</a>
+    <a href="chatadmin.html"><i class="fa-solid fa-comments"></i><br>Chat</a>
+    <a href="profileadmin.html"><i class="fa-solid fa-user"></i><br>Account</a>
+  </nav>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init("M_yE6sN1dcnxkwUzh"); 
+  </script>
+
+  <script type="module" src="notificationadmin.js"></script>
+</body>
+</html>

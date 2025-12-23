@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alui Salon - Worker</title>
+    <link rel="stylesheet" href="worker.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <span class="material-icons back-btn" onclick="history.back()">arrow_back</span>
+            <h2>Worker</h2>
+        </div>
+
+        <hr class="divider">
+        <!-- Section: Available Worker -->
+        <div class="section-title">
+            <h3>Available</h3>
+        </div>
+        <div id="availableList" class="worker-list"></div>
+
+        <!-- Section: Unavailable Worker -->
+        <div class="section-title" style="margin-top: 25px;">
+            <h3>Unavailable</h3>
+        </div>
+        <div id="unavailableList" class="worker-list"></div>
+
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="mainsalon.html"><i class="fa-solid fa-house"></i><br>Home</a>
+        <a href="booking.html"><i class="fa-solid fa-calendar-check"></i><br>Booking</a>
+        <a href="shop.html"><i class="fa-solid fa-store"></i><br>Shop</a>
+        <a href="chat.html"><i class="fa-solid fa-comments"></i><br>Chat</a>
+        <a href="profile.html"><i class="fa-solid fa-user"></i><br>Account</a>
+    </nav>
+
+    <script type="module" src="worker.js"></script>
+</body>
+</html>

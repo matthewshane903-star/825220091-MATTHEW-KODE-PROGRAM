@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alui Salon (ADMIN)</title>
+  <link rel="stylesheet" href="mainsalonadmin.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="user">
+      <i class="fa-solid fa-user-circle"></i>
+      <div class="headername">
+        <b id="username"></b><br>
+        <span id="useremail"></span>
+      </div>
+    </div>
+    <div class="notif">
+      <a href="notificationadmin.html" class="notif-link">
+        <span class="material-icons">notifications</span>
+        <span class="notif-dot"></span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="content">
+    <!-- Hero Carousel -->
+    <section class="hero">
+      <div class="carousel">
+        <div class="slides active"><img src="Picture/fotosalon1.jpg" alt="Gambar 1"></div>
+        <div class="slides"><img src="Picture/fotosalon2.jpg" alt="Gambar 2"></div>
+        <div class="slides"><img src="Picture/fotosalon3.jpg" alt="Gambar 3"></div>
+      </div>
+
+      <h1><b>ALUI SALON</b></h1>
+      <a class="prev">&#10094;</a>
+      <a class="next">&#10095;</a>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu-container">
+      <div class="menu-box">
+        <a href="infoadmin.html" class="menu-item"><i class="fa-solid fa-circle-info"></i><p>Info</p></a>
+        <a href="workeradmin.html" class="menu-item"><i class="fa-solid fa-user-group"></i><p>Worker</p></a>
+        <a href="jamavailable.html" class="menu-item"><i class="fa-solid fa-clock"></i><p>Jam</p></a>
+        <a href="dashboard.html" class="menu-item"><i class="fa-solid fa-chart-line"></i><p>Dashboard</p></a>
+        <a href="admin.html" class="menu-item"><i class="fa-solid fa-crown"></i><p>Role</p></a>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+      <h2><b><u>Services:</u></b></h2>
+      <div class="services-grid">
+        <a href="#" class="service-card">
+          <img src="Picture/layananaluisalon1.jpg" alt="Hair Color">
+          <p>Hair Color</p>
+        </a>
+        <a href="#" class="service-card">
+          <img src="Picture/layananaluisalon2.jpg" alt="Hair Cut">
+          <p>Hair Cut</p>
+        </a>
+        <a href="#" class="service-card">
+          <img src="Picture/layananaluisalon3.jpg" alt="Hair Treatment">
+          <p>Hair Treatment</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="mainsalonadmin.html"><i class="fa-solid fa-house"></i><br>Home</a>
+    <a href="calender.html"><i class="fa-solid fa-calendar-check"></i><br>Calender</a>
+    <a href="cekpembayaran.html"><i class="fa-solid fa-file-lines"></i><br>Cek Status</a>
+    <a href="chatadmin.html"><i class="fa-solid fa-comments"></i><br>Chat</a>
+    <a href="profileadmin.html"><i class="fa-solid fa-user"></i><br>Account</a>
+  </nav>
+
+  <script type="module" src="mainsalonadmin.js"></script>
+</body>
+</html>

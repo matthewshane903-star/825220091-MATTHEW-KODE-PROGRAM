@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alui Salon - Hair Cut</title>
+  <link rel="stylesheet" href="haircut.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Hair Cut</h1>
+    <div class="process-dropdown" id="processDropdown">
+      <button class="process-btn">Information <span class="material-icons">expand_more</span></button>
+        <div class="process-content">
+          <ul id="processList"></ul>
+        </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="haircard">
+      <div class="image-slider">
+        <button class="prev-btn material-icons">chevron_left</button>
+        <div class="image-container">
+          <img class="hairImage active" src="Picture/haircut1.jpg" alt="Haircut 1" />
+          <img class="hairImage" src="Picture/haircut2.jpg" alt="Haircut 2" />
+          <img class="hairImage" src="Picture/haircut3.jpg" alt="Haircut 3" />
+        </div>
+        <button class="next-btn material-icons">chevron_right</button>
+      </div>
+
+      <div class="overlay">
+        <div class="overlay-header">
+          <h2 class="hairTitle">Hair Cut Models</h2>
+          <button class="material-icons toggleBtn">expand_less</button>
+        </div>
+
+
+        <div class="overlay-content">
+          <table class="priceTable">
+            <thead>
+              <tr><th>Price</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Rp 450.000 - Rp 550.000</td></tr>
+            </tbody>
+          </table>
+
+          <br>
+
+          <p class="note"><strong>Note:</strong> Price Include Wash & Styling</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal Zoom Gambar -->
+  <div id="imageModal" class="modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modalImage" alt="Preview Gambar">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="mainsalon.html"><i class="fa-solid fa-house"></i><br>Home</a>
+    <a href="booking.html"><i class="fa-solid fa-calendar-check"></i><br>Booking</a>
+    <a href="shop.html"><i class="fa-solid fa-store"></i><br>Shop</a>
+    <a href="chat.html"><i class="fa-solid fa-comments"></i><br>Chat</a>
+    <a href="profile.html"><i class="fa-solid fa-user"></i><br>Account</a>
+  </nav>
+
+  <script src="haircut.js"></script>
+</body>
+</html>

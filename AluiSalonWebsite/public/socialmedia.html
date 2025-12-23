@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alui Salon - Social Media</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="socialmedia.css">
+</head>
+
+<body>
+  <header>Social Media</header>
+  <div class="slider-container">
+    <div class="background-layer"></div>
+
+    <button class="slide-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+
+    <div class="slider">
+      <!-- Slide Instagram -->
+      <div class="slide instagram active" 
+           data-bg="Picture/backgroundsocialmedia1.jpg"
+           data-link="https://www.instagram.com/alui.salon?igsh=M3YycHN2YjF4Zjlh"">
+        <div class="card instagram">
+          <i class="fa-brands fa-instagram"></i>
+          <p>Instagram</p>
+          <p>-</p>
+          <h5>alui.salon</h5>
+        </div>
+        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+
+      <!-- Slide TikTok -->
+      <div class="slide tiktok"
+           data-bg="Picture/backgroundsocialmedia2.jpg"
+           data-link="https://www.tiktok.com/@aluisalon?_t=ZS-90YyvxHyPAo&_r=1n">
+        <div class="card tiktok">
+          <i class="fa-brands fa-tiktok"></i>
+          <p>TikTok</p>
+          <p>-</p>
+          <h5>@aluisalon</h5>
+        </div>
+        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+    </div>
+
+    <button class="slide-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="mainsalon.html"><i class="fa-solid fa-house"></i><br>Home</a>
+    <a href="#"><i class="fa-solid fa-calendar-check"></i><br>Booking</a>
+    <a href="shop.html"><i class="fa-solid fa-store"></i><br>Shop</a>
+    <a href="#"><i class="fa-solid fa-comments"></i><br>Chat</a>
+    <a href="profile.html"><i class="fa-solid fa-user"></i><br>Account</a>
+  </nav>
+  
+  <script src="socialmedia.js"></script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Alui Salon - Booking</title>
+  <script>window.userNotelp = "081234567891";</script>
+  <link rel="stylesheet" href="booking.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="header">
+        <a href="mainsalon.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+        <h2>Booking Form</h2>
+      </div>
+
+      <!-- Progress -->
+      <nav class="progress">
+        <div class="step" data-step="0">
+          <span class="num">1</span>
+          <span>Consultation Form</span>
+        </div>
+        <div class="step" data-step="1">
+          <span class="num">2</span>
+          <span>Bleach / No Bleach</span>
+        </div>
+        <div class="step" data-step="2">
+          <span class="num">3</span>
+          <span>Booking Jadwal</span>
+        </div>
+        <div class="step" data-step="3">
+          <span class="num">4</span>
+          <span>Detail Booking</span>
+        </div>
+        <div class="step" data-step="4">
+          <span class="num">5</span>
+          <span>Pembayaran DP</span>
+        </div>
+      </nav>
+
+      <section class="content">
+        <!-- Consultation form -->
+        <article id="consultationCard" class="card">
+          <h1 class="card-title">Consultation Form</h1>
+
+          <div class="card-body">
+            <form id="consultationForm">
+              <!-- Pertanyaan -->
+              <div class="q">
+                <p class="q-text">Apakah pernah mewarnai rambut?</p>
+                <label><input type="radio" name="q1" value="iya"> Iya</label>
+                <label><input type="radio" name="q1" value="tidak"> Tidak</label>
+              </div>
+              <div class="q">
+                <p class="q-text">Apakah dirambut kamu ada extentions?</p>
+                <label><input type="radio" name="q2" value="iya"> Iya</label>
+                <label><input type="radio" name="q2" value="tidak"> Tidak</label>
+              </div>
+              <div class="q">
+                <p class="q-text">Apakah di rambut sekarang ada coloring dark brown atau toning 3 tahun terakhir?</p>
+                <label><input type="radio" name="q3" value="iya"> Iya</label>
+                <label><input type="radio" name="q3" value="tidak"> Tidak</label>
+              </div>
+              <div class="q">
+                <p class="q-text">Menggelapkan warna rambut (dari terang bleach di cat supaya terlihat lebih gelap)</p>
+                <label><input type="radio" name="q4" value="iya"> Iya</label>
+                <label><input type="radio" name="q4" value="tidak"> Tidak</label>
+              </div>
+              <div class="q">
+                <p class="q-text">Apakah pernah box dye?</p>
+                <label><input type="radio" name="q5" value="iya"> Iya</label>
+                <label><input type="radio" name="q5" value="tidak"> Tidak</label>
+              </div>
+              <div class="q">
+                <p class="q-text">Pernah treatment Keratin / Smoothing?</p>
+                <label><input type="radio" name="q6" value="iya"> Iya</label>
+                <label><input type="radio" name="q6" value="tidak"> Tidak</label>
+              </div>
+              <div class="q">
+                <p class="q-text">Pernah permanen blow / cushion setting / digital permanent rambut?</p>
+                <label><input type="radio" name="q7" value="iya"> Iya</label>
+                <label><input type="radio" name="q7" value="tidak"> Tidak</label>
+              </div>
+              <div class="q">
+                <p class="q-text">Apakah kamu alergi amonia?</p>
+                <label><input type="radio" name="q8" value="iya"> Iya</label>
+                <label><input type="radio" name="q8" value="tidak"> Tidak</label>
+              </div>
+              <div class="q">
+                <p class="q-text">Apakah ada bagian kulit kepala yang sensitif, seperti eksim?</p>
+                <label><input type="radio" name="q9" value="iya"> Iya</label>
+                <label><input type="radio" name="q9" value="tidak"> Tidak</label>
+              </div>
+              <div class="q">
+                <p class="q-text">Apakah ada rambut uban yang ingin di cat?</p>
+                <label><input type="radio" name="q10" value="iya"> Iya</label>
+                <label><input type="radio" name="q10" value="tidak"> Tidak</label>
+              </div>
+              <div class="q">
+                <p class="q-text">Diving / berenang air kaporit rutin selama 6 bulan terakhir?</p>
+                <label><input type="radio" name="q11" value="iya"> Iya</label>
+                <label><input type="radio" name="q11" value="tidak"> Tidak</label>
+              </div>
+              <div class="q">
+                <p class="q-text">Apakah Haircolor untuk Wedding / Prewed?</p>
+                <label><input type="radio" name="q12" value="iya"> Iya</label>
+                <label><input type="radio" name="q12" value="tidak"> Tidak</label>
+              </div>
+              <div class="q">
+                <p class="q-text">Kirimkan foto rambut hari ini tampak belakang.</p>
+                <label><input type="radio" name="q13" value="iya"> Iya</label>
+                <label><input type="radio" name="q13" value="tidak"> Tidak</label>
+              </div>
+            </form>
+          </div>
+
+          <div class="card-footer">
+            <div class="user-info">
+              <p><strong>Nama :</strong> <span id="consultUserName">-</span></p>
+              <p><strong>Email :</strong> <span id="consultUserEmail">-</span></p>
+            </div>
+            <p class="note">*Silahkan save consultation form terlebih dahulu lalu kemudian diberikan ke admin</p>
+            <div class="actions">
+              <button id="chatAdminBtn" class="btn chat" disabled>Chat Admin</button>
+              <button id="downloadBtn" class="btn save" title="Simpan form sebagai foto">
+                <i class="fa-solid fa-download"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Bleach / No Bleach Section -->
+        <article id="bleachSection" class="panel hidden">
+          <h1 class="card-title">Bleach / No Bleach</h1>
+
+          <div class="bleach-container">
+            <!-- Pilih Kategori -->
+            <div class="form-group">
+              <label for="kategori">Pilih Kategori :<br><small>(Sesuai Konsultasi Admin)</small></label>
+              <select id="kategori" class="dropdown">
+                <option value="" disabled selected>-- Pilih --</option>
+                <option value="bleach">Bleach</option>
+                <option value="noBleach">No Bleach</option>
+              </select>
+              <p class="note">*Jika sudah appointment untuk no bleach, maka tidak bisa diubah menjadi bleach</p>
+            </div>
+
+            <!-- Jenis Hair Color -->
+            <div class="form-group">
+              <label>Pilih Jenis Hair Color :<br><small>(Sesuai Konsultasi Admin)</small></label>
+              <div id="jenisHairColor" class="haircolor-options">
+                <!-- tombol jenis hair color di JS -->
+              </div>
+            </div>
+
+            <div class="note warning">
+              <strong>Noted:</strong> Jika pilihan tidak sesuai dengan apa yang sudah dikonsultasikan,
+              Alui Salon tidak akan bertanggung jawab atas hasil yang tidak baik.
+            </div>
+
+            <div class="next-step">
+              <button id="btnLanjutBooking" class="btn-next">Booking Jadwal</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Booking Jadwal Section -->
+        <article id="bookingJadwal" class="panel hidden">
+          <h2>Booking Jadwal</h2>
+
+          <div class="booking-container">
+            <!-- Bulan -->
+            <div class="month-slider">
+              <button id="prevMonth" class="month-btn prev">&lt;</button>
+              <h3 id="currentMonth">November 2025</h3>
+              <button id="nextMonth" class="month-btn next">&gt;</button>
+            </div>
+
+            <!-- Kalender -->
+            <div class="calendar">
+              <div class="weekdays">
+                <span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span><span>Sab</span><span>Min</span>
+              </div>
+              <div class="days" id="daysContainer"><!-- tanggal otomatis dari JS --></div>
+            </div>
+
+            <!-- Appointment Time -->
+            <div class="time-container">
+              <h4><u>Waktu Appointment :</u></h4>
+              <br>
+              <div class="time-slider" id="time-slider">
+                <!-- Tombol waktu -->
+              </div>
+            </div>
+
+            <div class="next-step">
+              <button id="btnDetailBooking" class="btn-next">
+                Detail Booking
+              </button>
+              <br><br>
+              <button id="btnKembaliBleach" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Kembali
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Detail Booking Section -->
+        <article id="detailBooking" class="panel hidden">
+          <h2 class="card-title">Detail Booking</h2>
+
+          <div class="detail-card">
+            <h3>Alui Salon<br>Booking’s Detail</h3>
+            <div class="detail-info">
+              <p><strong>Nama</strong> :<br> <span id="detailNama">-</span></p><br>
+              <p><strong>Email</strong> :<br> <span id="detailEmail">-</span></p><br>
+              <p><strong>Jadwal Appointment</strong> :<br> <span id="detailTanggal">-</span></p><br>
+              <p><strong>Jam Appointment</strong> :<br> <span id="detailJam">-</span></p><br>
+              <p><strong>Kategori Hair Color</strong> :<br> <span id="detailKategori">-</span></p><br>
+              <p><strong>Jenis Hair Color</strong> :<br> <span id="detailJenis">-</span></p>
+            </div>
+          </div>
+          <p class="note"><strong>Noted :</strong> Silahkan datang sesuai dengan waktu yang tertera.</p>
+
+          <div class="next-step">
+            <button id="btnDownPayment" class="btn-next">Down Payment</button>
+            <br><br>
+            <button id="btnKembaliDetail" class="btn-back">
+              <i class="fa-solid fa-arrow-left"></i> Kembali
+            </button>
+          </div>
+        </article>
+
+        <!-- Pembayaran DP Section -->
+        <article id="pembayaranDP" class="panel hidden">
+          <h2 class="card-title">Down Payment</h2>
+
+          <div class="payment-section">
+            <h3 class="payment-header">Payment Method:</h3>
+            <div class="payment-box">
+              <div class="bank-info">
+                <img src="Picture/bca.jpg" alt="BCA" class="bank-logo">
+                <div class="bank-details">
+                  <p><strong>Transfer via bank BCA</strong></p>
+                  <p>No.Rekening (<strong>A/N Darrius</strong>):</p>
+                  <div class="rekening-box">
+                    <span id="rekeningNumber">2440387252</span>
+                    <button id="copyRekening" class="copy-btn" title="Salin Nomor Rekening">
+                      <i class="fa-regular fa-copy"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="terms-header">Terms & Conditions:</h3>
+            <ul class="terms-list">
+              <li>Untuk mendapatkan slot appointment, mohon membayar down payment sebesar <strong>Rp 500.000</strong>.
+                Bukti transfer disertai dengan nama lengkap.</li>
+              <li>Batas transfer hanya berlaku selama <strong>1 jam</strong>.</li>
+              <li>Tanpa DP, slot masih bisa diambil oleh client lain.</li>
+              <li>Slot yang telah didapat tidak bisa dipindahkan ke tanggal atau jam lain.</li>
+              <li>Jika ada pembatalan appointment, maka DP hangus.</li>
+              <li>Sisa pembayaran dilunasi di hari appointment (disertai name dan bukti transfer).</li>
+              <li>Keterlambatan pada hari appointment max. <strong>30 menit</strong>.</li>
+              <li>Bila terlambat di atas 30 menit, maka appointment dianggap batal dan DP hangus.</li>
+              <li>Dengan adanya pembayaran DP, Anda dianggap sudah membaca dan menyetujui semua peraturan di atas.</li>
+            </ul>
+
+            <div class="payment-actions">
+              <!-- Upload Bukti Transfer -->
+              <div class="upload-proof">
+                <label for="buktiTransfer"><strong>Upload Bukti Transfer</strong></label>
+                <input type="file" id="buktiTransfer" accept="image/*" />
+                <small>*Format gambar (jpg / png)</small>
+              </div>
+
+              <button type="button" id="btnSelesai" class="btn-finish">Selesai</button>
+            </div>
+
+          </div>
+        </article>
+      </section>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="mainsalon.html"><i class="fa-solid fa-house"></i><br>Home</a>
+    <a href="booking.html" class="active"><i class="fa-solid fa-calendar-check"></i><br>Booking</a>
+    <a href="shop.html"><i class="fa-solid fa-store"></i><br>Shop</a>
+    <a href="#"><i class="fa-solid fa-comments"></i><br>Chat</a>
+    <a href="profile.html"><i class="fa-solid fa-user"></i><br>Account</a>
+  </nav>
+
+  <script type="module" src="booking.js"></script>
+</body>
+
+</html>

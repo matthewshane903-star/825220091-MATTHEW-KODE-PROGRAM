@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alui Salon - Worker</title>
+    <link rel="stylesheet" href="workeradmin.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <span class="material-icons back-btn">arrow_back</span>
+            <h2>Worker</h2>
+        </div>
+        <hr class="divider">
+        <div class="section-title">
+            <h3>Professional Worker</h3>
+            <span class="material-icons add-btn">add_circle</span>
+        </div>
+        <div id="workerList" class="worker-list"></div>
+    </div>
+
+    <!-- Modal Tambah Worker -->
+    <div id="modalAdd" class="modal">
+        <div class="modal-card">
+            <h3 class="modal-title">Tambah Data Worker</h3>
+
+            <input type="text" id="workerName" class="modal-input" placeholder="isi nama worker...">
+            <input type="text" id="workerRole" class="modal-input" placeholder="isi keahlian worker...">
+
+            <button id="sendWorker" class="send-icon">
+                <span class="material-icons">send</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+  <nav class="navbar">
+    <a href="mainsalonadmin.html"><i class="fa-solid fa-house"></i><br>Home</a>
+    <a href="calender.html"><i class="fa-solid fa-calendar-check"></i><br>Calender</a>
+    <a href="cekpembayaran.html"><i class="fa-solid fa-file-lines"></i><br>Cek Status</a>
+    <a href="chatadmin.html"><i class="fa-solid fa-comments"></i><br>Chat</a>
+    <a href="profileadmin.html"><i class="fa-solid fa-user"></i><br>Account</a>
+  </nav>
+
+    <script type="module" src="workeradmin.js"></script>
+</body>
+</html>

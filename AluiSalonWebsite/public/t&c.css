@@ -1,0 +1,115 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url("Picture/backgroundaluisalon.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  margin: 0;
+  padding-bottom: 80px;
+}
+
+.tac-header {
+  text-align: center;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.tac-header h2 {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  background: none;
+  color: #000;
+}
+
+.tac-header h3 {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  background: none;
+  margin-top: 5px;
+}
+
+.tac-container {
+  background: #fff;
+  border-radius: 16px;
+  margin: 20px auto;
+  padding: 25px 25px 35px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  max-width: 500px;
+}
+
+.tac-list {
+  list-style-position: inside;
+  padding-left: 0;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.tac-list li {
+  margin-bottom: 12px;
+  background: #f7f7f7;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.tac-list b {
+  color: #000;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+.navbar i {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 600px) {
+  .tac-container {
+    max-width: 90%;
+    padding: 20px 15px;
+    font-size: 0.9rem;
+  }
+
+  .tac-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .tac-header h3 {
+    font-size: 1rem;
+  }
+
+  .tac-list li {
+    padding: 9px 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .tac-container {
+    max-width: 600px;
+    padding: 30px 35px;
+  }
+
+  .tac-list {
+    font-size: 1rem;
+  }
+}

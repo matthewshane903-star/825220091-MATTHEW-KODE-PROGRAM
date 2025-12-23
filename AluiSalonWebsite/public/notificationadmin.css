@@ -1,0 +1,187 @@
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: url("Picture/backgroundaluisalon.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding-bottom: 80px;
+  color: #fff;
+}
+
+.app-header {
+  position: relative;
+  text-align: center;
+  padding: 18px 20px;
+  background: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.add-btn, .back-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.app-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Notifikasi Card */
+.notif-card {
+  background-color: rgba(68, 68, 68, 0.9);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.notif-card:hover {
+  transform: scale(1.02);
+}
+
+.notif-card h3 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+}
+
+.notif-card p {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.notif-card small {
+  display: block;
+  text-align: right;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  text-align: center;
+  color: #fff;
+  backdrop-filter: blur(10px);
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 90%;
+  margin-bottom: 12px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.modal-content textarea {
+  resize: none;
+  height: 80px;
+}
+
+.modal-content button {
+  background: #fff;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.modal-content button:hover {
+  background: #ddd;
+}
+
+/* Dropdown Target Notifikasi */
+.modal-content select {
+  width: 95%;
+  margin-bottom: 12px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 0.95rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.modal-content select {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px;
+}
+
+.modal-content select option {
+  color: #333;
+  background: #fff;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
+.navbar i {
+  font-size: 20px;
+  margin-bottom: 4px;
+}

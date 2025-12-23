@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Alui Salon - Login</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="login.js"></script>
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+  <div class="card-container">
+    <div class="card" aria-label="form login">
+      <h1 class="title"><b>Login</b></h1>
+
+      <form id="loginForm">
+        <label for="email"><b>Email</b></label>
+        <input id="email" class="input" type="text" placeholder="email@gmail.com" required>
+
+        <label for="password"><b>Password</b></label>
+        <div class="password-row">
+          <input id="password" class="input" type="password" placeholder="password" required>
+          <button type="button" class="toggle-pass" id="togglePass" aria-label="Toggle password visibility">
+            <svg id="eyeOpen" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 10s4-6 9-6 9 6 9 6-4 6-9 6-9-6-9-6z"/>
+              <circle cx="10" cy="10" r="3"/>
+            </svg>
+            <svg id="eyeClosed" style="display:none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17.94 17.94A10.94 10.94 0 0 1 10 19C5 19 1 13 1 13s1.64-2.46 4.06-4.06"/>
+              <path d="M9.53 9.53a3 3 0 0 0 4.24 4.24"/>
+              <path d="M1 1l18 18"/>
+            </svg>
+          </button>
+        </div>
+
+        <button class="btn" id="submit" type="submit">Login</button>
+
+        <button id="google-login" class="google-btn" type="button">
+          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google Logo">
+          <span>Login with Google</span>
+        </button>
+
+        <div class="remember-row">
+          <input type="checkbox" id="rememberMe">
+          <label for="rememberMe">Remember Me</label>
+        </div>
+
+        <div class="account-text">
+          Don't Have an account? <a href="index.html">Create Account</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div id="loading-overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <script>
+    const pass = document.getElementById('password');
+    const toggle = document.getElementById('togglePass');
+    const eyeOpen = document.getElementById('eyeOpen');
+    const eyeClosed = document.getElementById('eyeClosed');
+
+    toggle.addEventListener('click', () => {
+      if (pass.type === 'password') {
+        pass.type = 'text';
+        eyeOpen.style.display = 'none';
+        eyeClosed.style.display = 'block';
+      } else {
+        pass.type = 'password';
+        eyeOpen.style.display = 'block';
+        eyeClosed.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>

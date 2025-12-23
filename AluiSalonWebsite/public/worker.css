@@ -1,0 +1,172 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: url("Picture/backgroundaluisalon.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  margin: auto;
+  min-height: 100vh;
+  background: #dddddd;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.back-btn {
+  cursor: pointer;
+}
+
+.divider {
+  margin-top: 5px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.section-title {
+  margin: 15px 0 8px;
+}
+
+.section-title h3 {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+.worker-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.worker-card {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.worker-avatar {
+  background: #dadada;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 26px;
+}
+
+.worker-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.worker-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.worker-role {
+  font-size: 13px;
+  color: #666;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
+.navbar i {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 380px) {
+  .worker-card {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .worker-name {
+    font-size: 14px;
+  }
+
+  .worker-role {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 600px) {
+  .container {
+    max-width: 600px;
+    padding: 20px;
+  }
+
+  .worker-card {
+    padding: 15px;
+  }
+
+  .worker-name {
+    font-size: 17px;
+  }
+
+  .worker-role {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 900px) {
+  body {
+    background-size: cover;
+  }
+
+  .container {
+    max-width: 700px;
+    padding: 25px;
+    background: rgba(240,240,240,0.95);
+    border-radius: 12px;
+    margin-top: 20px;
+    margin-bottom: 65px;
+  }
+
+  .worker-card {
+    padding: 20px;
+    gap: 18px;
+  }
+
+  .worker-avatar {
+    font-size: 32px;
+    padding: 10px;
+  }
+
+  .worker-name {
+    font-size: 18px;
+  }
+
+  .worker-role {
+    font-size: 14px;
+  }
+}

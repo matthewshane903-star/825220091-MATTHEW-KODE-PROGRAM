@@ -1,0 +1,75 @@
+body {
+  font-family: Poppins, Arial, sans-serif;
+  background: linear-gradient(135deg, #1f1f1f, #333);
+  color: white;
+  margin: 0;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: #222;
+  position: relative;
+}
+
+.back-btn {
+  position: absolute;
+  left: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.card {
+  background: rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  background: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ddd;
+}
+
+.warning {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+}

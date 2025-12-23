@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alui Salon - Setting Jam</title>
+    <link rel="stylesheet" href="jamavailable.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <h2>Calender</h2>
+    </header>
+
+    <main class="container">
+        <!-- Navigasi Bulan -->
+        <div class="month-nav">
+            <button id="prevMonth"><i class="fa-solid fa-chevron-left"></i></button>
+            <h3 id="currentMonth"></h3>
+            <button id="nextMonth"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <!-- Kalender -->
+        <div class="calendar">
+            <div class="weekdays">
+                <span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span><span>Sab</span><span>Min</span>
+            </div>
+            <div class="days" id="daysContainer"></div>
+        </div>
+        <!-- Waktu Appointment -->
+        <h3>Waktu Appointment :</h3>
+        <div id="savedTimes" class="time-slots"></div>
+        <button id="btnAddTime" class="add-time-btn" style="display:none;">
+            + Input Jam Appointment
+        </button>
+
+    </main>
+
+    <!-- Modal -->
+    <div id="timeModal" class="modal">
+        <div class="modal-content">
+            <h3>Input jam di tanggal (<span id="modalDate"></span>)</h3>
+            <div id="timeChoices" class="time-choices"></div>
+            <button id="btnSaveTime" class="save-btn">Simpan</button>
+            <button id="btnCloseModal" class="close-btn">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="mainsalonadmin.html"><i class="fa-solid fa-house"></i><br>Home</a>
+        <a href="calender.html"><i class="fa-solid fa-calendar-check"></i><br>Calender</a>
+        <a href="cekpembayaran.html"><i class="fa-solid fa-file-lines"></i><br>Cek Status</a>
+        <a href="chatadmin.html"><i class="fa-solid fa-comments"></i><br>Chat</a>
+        <a href="profileadmin.html"><i class="fa-solid fa-user"></i><br>Account</a>
+    </nav>
+
+    <script type="module" src="jamavailable.js"></script>
+</body>
+</html>

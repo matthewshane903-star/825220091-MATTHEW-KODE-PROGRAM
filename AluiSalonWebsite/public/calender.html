@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alui Salon - Calendar</title>
+  <link rel="stylesheet" href="calender.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h2>Calender</h2>
+  </header>
+
+  <main class="container">
+    <!-- Navigasi Bulan -->
+    <div class="month-nav">
+      <button id="prevMonth"><i class="fa-solid fa-chevron-left"></i></button>
+      <h3 id="currentMonth"></h3>
+      <button id="nextMonth"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Kalender -->
+    <div class="calendar">
+      <div class="weekdays">
+        <span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span><span>Sab</span><span>Min</span>
+      </div>
+      <div class="days" id="daysContainer"></div>
+    </div>
+
+    <!-- Jam Tersedia -->
+    <h3>Waktu Appointment :</h3>
+    <div id="timeSlots" class="time-slots">
+      <!-- tombol jam otomatis dari JS -->
+    </div>
+
+    <!-- Daftar Client -->
+    <h3>Client :</h3>
+    <div id="clientList" class="client-list">
+      <!-- data client otomatis -->
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal" id="rescheduleModal">
+        <h3>Reschedule Appointment</h3>
+        <label for="newDateSelect">Tanggal Baru:</label>
+        <select id="newDateSelect"></select>
+        <label for="newTimeSelect">Jam Baru:</label>
+        <select id="newTimeSelect"></select>
+        <button id="rescheduleBtn">Reschedule</button>
+        <button class="close-btn" id="closeModalBtn">Batal</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="mainsalonadmin.html"><i class="fa-solid fa-house"></i><br>Home</a>
+    <a href="calender.html"><i class="fa-solid fa-calendar-check"></i><br>Calender</a>
+    <a href="cekpembayaran.html"><i class="fa-solid fa-file-lines"></i><br>Cek Status</a>
+    <a href="chatadmin.html"><i class="fa-solid fa-comments"></i><br>Chat</a>
+    <a href="profileadmin.html"><i class="fa-solid fa-user"></i><br>Account</a>
+  </nav>
+
+  <script type="module" src="calender.js"></script>
+</body>
+
+</html>
