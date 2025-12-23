@@ -1,0 +1,23 @@
+[
+  {
+    "id": "0QDyO3iQ5nyFGMu8IEmO",
+    "name": "Vina",
+    "role": "Professional Hairstylist",
+    "createdAt": 1763370786029,
+    "active": true
+  },
+  {
+    "id": "C6lL9KQ1M8qVgWDqMK1S",
+    "name": "Alui",
+    "role": "Specialist HairCut",
+    "createdAt": 1763569364815,
+    "active": false
+  },
+  {
+    "id": "cRVTF1nCIOQnSPRSZWg3",
+    "name": "Rica",
+    "role": "Professional Hairstylist",
+    "createdAt": 1763367797974,
+    "active": true
+  }
+]
